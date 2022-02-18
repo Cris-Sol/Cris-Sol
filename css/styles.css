@@ -1,3 +1,7 @@
-body{
-    background: azure;
+:root {
+    --color-primary:  #E8DED1; /*White Coffee*/
+    --color-secondary: #D1C0A8; /*Dark Vanilla*/
+    --color-accent: #4DD080;
+    --color-headings: #684B31; /*Coffee*/
+    --color-body: #A56953;  /*Brown Sugar*/
 }
