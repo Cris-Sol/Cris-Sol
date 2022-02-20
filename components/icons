@@ -1,0 +1,22 @@
+    <span class="icon-container">
+        <svg class="icon icon--primary">
+            <use xlink:href="images/sprite.svg#choose"></use>
+        </svg>
+    </span>
+      <svg class="icon">
+        <use xlink:href="#clock"></use>
+      </svg><svg class="icon">
+        <use xlink:href="#computer"></use>
+      </svg><svg class="icon">
+        <use xlink:href="#fingerprint"></use>
+      </svg><svg class="icon">
+        <use xlink:href="#growth"></use>
+      </svg><svg class="icon">
+        <use xlink:href="#menu"></use>
+      </svg><svg class="icon">
+        <use xlink:href="#quotes"></use>
+      </svg><svg class="icon">
+        <use xlink:href="#unicorn"></use>
+      </svg><svg class="icon">
+        <use xlink:href="#wordpress"></use>
+      </svg>
