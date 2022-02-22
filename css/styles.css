@@ -4,6 +4,8 @@
   --color-accent: #4dd080;
   --color-headings: #684b31; /*Coffee*/
   --color-body: #a56953; /*Brown Sugar --might change...*/
+  --color-border: #d1cdca;
+  --border-radius: 4rem;
 }
 
 *,
@@ -151,12 +153,12 @@ a {
 }
 
 .icon--primary {
-  fill: var(--color-accent);
+  fill: var(--color-headings);
 }
 
 .icon-container {
+  /* background-color: var(--color-secondary); */
   align-items: center;
-  background-color: var(--color-secondary);
   border-radius: 100%;
   display: inline-flex;
   height: 64px;
@@ -166,7 +168,7 @@ a {
 
 /*Buttons*/
 .btn {
-  border-radius: 40px;
+  border-radius: var(--border-radius);
   border-style: none;
   box-shadow: 4px 4px rgba(209, 192, 168, 0.3);
   cursor: pointer;
@@ -224,4 +226,59 @@ a {
   .btn {
     font-size: 1.5rem;
   }
+}
+
+/*INPUTS*/
+.textinput {
+  padding: 1.5rem 3.5rem;
+  border-radius: var(--border-radius);
+  border-width: 2px;
+  border-color: var(--color-border);
+  box-shadow: 7px 10px rgba(209, 192, 168, 0.1);
+}
+
+.textinput:focus,
+.textinput:hover {
+  border-style: none;
+  outline: var(--color-accent) solid 2px;
+  box-shadow: 7px 10px rgba(62, 207, 33, 0.08);
+}
+
+::placeholder {
+  font-size: 2rem;
+  color: #aca198;
+}
+
+@media only screen and (min-width: 1024px) {
+  ::placeholder {
+    font-size: 1.5rem;
+  }
+}
+
+/*grouping button and input field*/
+
+.input-group {
+  display: flex;
+  box-shadow: 7px 10px rgba(209, 205, 202, 0.2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+}
+
+.input-group .textinput {
+  border-style: none;
+  border: 0;
+  flex-grow: 1;
+  padding-left: 10px;
+  box-shadow: none;
+}
+
+.input-group .btn {
+  margin: 0;
+  box-shadow: none;
+}
+
+.input-group .textinput:hover,
+.textinput:focus {
+  border-style: none;
+  outline: 0;
 }
