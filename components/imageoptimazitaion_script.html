@@ -1,0 +1,15 @@
+<!--This script is to be added on top of any image that is too large for a healthy load
+Add this instead of the img element.
+Before inserting, make sure to adjust your image to high density screens, preferably 2 or three 
+versions of the same image with small bigger and biggest resolution-->
+
+<picture>
+    <source type="image/webp"
+    srcset="images/yourpicturename.webp 1x, images/yourpicturename@2x.webp 2x"
+    />
+    <source type="image/png"
+    srcset="images/yourpicturename.png 1x, images/yourpicturename@2x.png 2x"
+    />
+    
+    <img  src="images/yourimagename.png" alt="">
+</picture>
