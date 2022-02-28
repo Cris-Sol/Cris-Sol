@@ -2,7 +2,7 @@
   --color-primary: #d1c0a8; /*Dark Vanilla*/
   --color-secondary: #e8ded1; /*White Coffee*/
   --color-accent: #4dd080;
-  --color-headings: #684b31; /*Coffee*/
+  --color-headings: #d19240; /*Coffee*/
   --color-body: #a56953; /*Brown Sugar --might change...*/
   --color-border: #d1cdca;
   --border-radius: 4rem;
@@ -22,7 +22,7 @@ html {
 }
 html,
 body {
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 100%;
   margin: 0;
 }
@@ -641,7 +641,7 @@ a {
   margin-top: 0;
 }
 .block--dark {
-  background-color: rgb(8, 8, 8);
+  background-color: var(--color-darker);
   color: #92887f;
 }
 .block--dark .block__heading {
@@ -649,7 +649,7 @@ a {
 }
 .block_clipped_right {
   padding-bottom: var(--padding-vertical) + 4rem;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 93%, 0% 100%);
 }
 .block_clipped_left {
   padding-bottom: var(--padding-vertical) + 4rem;
@@ -718,5 +718,33 @@ nav.collapsible--expanded .icon-container .icon.bg-menu {
   }
   .nav.collapsible .icon-container {
     cursor: default;
+  }
+}
+/*TOP BANNER*/
+.hero__content {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero__header {
+  line-height: 7rem;
+  margin: 2rem 0;
+  color: var(--color-headings);
+}
+.contain_heroimage {
+  height: 70%;
+  width: 70%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1500px) {
+  .hero__content .hero__header {
+    font-size: 5rem;
+    line-height: 5.2rem;
+  }
+  .hero__content .hero__text {
+    font-size: 2.3rem;
+    line-height: 2.5rem;
   }
 }
