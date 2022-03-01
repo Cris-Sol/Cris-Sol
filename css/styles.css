@@ -426,6 +426,9 @@ a {
   margin-bottom: 2rem;
   letter-spacing: 0.8px;
 }
+.plan--popular {
+  transform: scale(1.1);
+}
 
 .plan--popular .card__header {
   position: relative;
@@ -794,7 +797,7 @@ nav.collapsible--expanded .icon-container .icon.bg-menu {
   font-size: 2rem;
   justify-items: center;
   max-width: 70rem;
-  margin: 0 auto;
+  margin: 0 minmax(2rem 100rem);
 }
 @media only screen and (min-width: 768px) {
   .block-domain__price {
@@ -803,4 +806,20 @@ nav.collapsible--expanded .icon-container .icon.bg-menu {
 }
 
 /*PLANS*/
-
+.plan {
+  transition: transform 0.2s ease-out;
+}
+.plan__block {
+  gap: 8rem 4rem;
+  padding: 6rem 2rem;
+}
+.plan__block .plan {
+  margin: 0 auto;
+  max-width: 40rem;
+}
+.plan__block .plan:hover {
+  transform: scale(1.05);
+}
+.plan__block .plan.plan--popular:hover {
+  transform: scale(1.15);
+}
