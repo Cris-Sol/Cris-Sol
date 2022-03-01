@@ -37,6 +37,7 @@ h2,
 h3 {
   color: var(-color-headings);
   margin-bottom: 1rem;
+  line-height: 1.1;
 }
 h1 {
   font-size: 6rem;
@@ -163,64 +164,75 @@ a {
 
 /*ICONS and SPRITES*/
 /*SPRITES*/
-.bg-clock {
+.bg-fingerprint {
   width: 512px;
   height: 512px;
   background: url("../images/css_sprites.png") -10px -10px;
 }
-.bg-line {
+.bg-clock {
   width: 512px;
   height: 512px;
   background: url("../images/css_sprites.png") -542px -10px;
 }
-.bg-fingerprint {
-  width: 100px;
-  height: 100px;
+.bg-growth {
+  width: 512px;
+  height: 512px;
   background: url("../images/css_sprites.png") -10px -542px;
 }
-.bg-check {
+.bg-line {
   width: 512px;
   height: 512px;
   background: url("../images/css_sprites.png") -542px -542px;
 }
-.bg-choose {
+.bg-menu {
   width: 512px;
   height: 512px;
   background: url("../images/css_sprites.png") -1074px -10px;
 }
-.bg-menu {
+.bg-monitor {
   width: 512px;
   height: 512px;
   background: url("../images/css_sprites.png") -1074px -542px;
 }
-.bg-growth {
+.bg-quotes {
   width: 512px;
   height: 512px;
   background: url("../images/css_sprites.png") -10px -1074px;
 }
-.bg-monitor {
+.bg-search {
+  width: 540px;
+  height: 512px;
+  background: url("../images/css_sprites.png") -525px -1074px;
+}
+.bg-wordpress {
   width: 512px;
   height: 512px;
-  background: url("../images/css_sprites.png") -542px -1074px;
-}
-.bg-quotes {
-  width: 550px;
-  height: 512px;
-  background: url("../images/css_sprites.png") -1045px -1074px;
+  background: url("../images/css_sprites.png") -1074px -1074px;
 }
 .bg-unicorn {
   width: 512px;
   height: 512px;
   background: url("../images/css_sprites.png") -1606px -10px;
 }
-.bg-wordpress {
+.bg-choose {
   width: 512px;
   height: 512px;
   background: url("../images/css_sprites.png") -1606px -542px;
 }
+.bg-check {
+  width: 512px;
+  height: 512px;
+  background: url("../images/css_sprites.png") -1606px -1074px;
+}
+.bg-down {
+  width: 512px;
+  height: 512px;
+  background: url("../images/css_sprites.png") -10px -1606px;
+}
 /*ICONS*/
 .icon {
   zoom: 0.1;
+  -moz-transform: translate(0deg) scale(0.1);
 }
 .icon-container {
   /* background-color: #a17765; /*var(--color-secondary); */
@@ -245,6 +257,14 @@ a {
   text-transform: uppercase;
   white-space: nowrap;
   margin: 1rem 0rem;
+}
+.btn .icon {
+  zoom: 0.06;
+  opacity: 0.6;
+}
+.btn .icon-container {
+  height: 40px;
+  vertical-align: middle;
 }
 
 .button--accent {
@@ -305,14 +325,12 @@ a {
   border-radius: var(--border-radius);
   border-width: 2px;
   border-color: var(--color-border);
-  box-shadow: 7px 10px rgba(209, 192, 168, 0.1);
 }
 
 .textinput:focus,
 .textinput:hover {
   border-style: none;
   outline: var(--color-accent) solid 2px;
-  box-shadow: 7px 10px rgba(62, 207, 33, 0.08);
 }
 
 ::placeholder {
@@ -330,16 +348,16 @@ a {
 
 .input-group {
   display: flex;
-  box-shadow: 7px 10px rgba(209, 205, 202, 0.2);
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius);
+  box-shadow: 4px 4px rgba(209, 192, 168, 0.8);
 }
 
 .input-group .textinput {
   border-style: none;
   border: 0;
   flex-grow: 1;
-  padding-left: 10px;
+  padding-left: 4.5rem;
   box-shadow: none;
 }
 
@@ -533,6 +551,7 @@ a {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 /*Testimonials*/
 .testimonial {
   margin: 3rem;
@@ -648,8 +667,8 @@ a {
   color: #d1c0a8;
 }
 .block_clipped_right {
-  padding-bottom: var(--padding-vertical) + 4rem;
-  clip-path: polygon(0 0, 100% 0, 100% 93%, 0% 100%);
+  padding-bottom: var(--padding-vertical) + 3rem;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
 }
 .block_clipped_left {
   padding-bottom: var(--padding-vertical) + 4rem;
@@ -721,6 +740,10 @@ nav.collapsible--expanded .icon-container .icon.bg-menu {
   }
 }
 /*TOP BANNER*/
+.hero {
+  padding-bottom: var(--padding-vertical) + 3rem;
+  clip-path: polygon(0 0, 100% 0, 100% 93%, 0% 100%);
+}
 .hero__content {
   margin: 2rem 0;
   display: flex;
@@ -737,7 +760,6 @@ nav.collapsible--expanded .icon-container .icon.bg-menu {
   height: 70%;
   width: 70%;
 }
-
 @media only screen and (min-width: 768px) and (max-width: 1500px) {
   .hero__content .hero__header {
     font-size: 5rem;
@@ -747,4 +769,38 @@ nav.collapsible--expanded .icon-container .icon.bg-menu {
     font-size: 2.3rem;
     line-height: 2.5rem;
   }
+  .hero__content {
+    align-self: center;
+    text-align: left;
+  }
 }
+/*Blocks*/
+.block {
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.block-domain .input-group {
+  box-shadow: 0 0 7px 10px rgba(209, 205, 202, 0.3);
+  border: 0;
+  margin: 4rem auto;
+  max-width: 70%;
+}
+.block-domain__price {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  font-weight: 600;
+  font-size: 2rem;
+  justify-items: center;
+  max-width: 70rem;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 768px) {
+  .block-domain__price {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+
+/*PLANS*/
+
