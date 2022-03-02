@@ -17,6 +17,10 @@
 }
 
 /*Typography*/
+::selection {
+  background: var(--color-primary);
+  color: var(--color-darker);
+}
 html {
   font-size: 62.5%;
 }
@@ -72,6 +76,7 @@ div > img {
   }
   h3 {
     font-size: 2.4rem;
+    font-weight: 500;
   }
 }
 /*Links*/
@@ -139,7 +144,6 @@ a {
 .lists {
   list-style: none;
   padding-left: 0;
-  color: var(--color-headings);
 }
 
 .lists--inline .lists__item {
@@ -148,6 +152,7 @@ a {
 }
 
 .list--tick {
+  color: var(--color-headings);
   background-image: url(../images/check.png);
   background-size: 17px;
   padding-left: 2rem;
@@ -465,6 +470,7 @@ a {
 .media {
   display: flex;
   position: relative;
+  margin-bottom: 4rem;
 }
 .media__title {
   margin: 0;
@@ -666,7 +672,6 @@ a {
 .block {
   --padding-vertical: 6rem;
   padding: var(--padding-vertical) 2rem;
-  text-align: center;
 }
 .block__heading {
   margin-top: 0;
@@ -680,11 +685,11 @@ a {
 }
 .block_clipped_right {
   padding-bottom: var(--padding-vertical) + 3rem;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 93%, 0% 100%);
 }
 .block_clipped_left {
   padding-bottom: var(--padding-vertical) + 4rem;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 80%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 93%);
 }
 .block__header {
   text-align: center;
@@ -754,7 +759,6 @@ nav.collapsible--expanded .icon-container .icon.bg-menu {
 /*TOP BANNER*/
 .hero {
   padding-bottom: var(--padding-vertical) + 3rem;
-  clip-path: polygon(0 0, 100% 0, 100% 93%, 0% 100%);
 }
 .hero__content {
   margin: 2rem 0;
@@ -845,7 +849,7 @@ nav.collapsible--expanded .icon-container .icon.bg-menu {
   margin-bottom: 17rem;
 }
 
-.block__features .icon {
+.block__feature .icon {
   zoom: 0.08;
 }
 .block__features .icon-container--background {
@@ -873,4 +877,23 @@ nav.collapsible--expanded .icon-container .icon.bg-menu {
   .feature__content:nth-of-type(even) {
     order: -1;
   }
+}
+/*SHOWCASE BLOCK*/
+@media only screen and (min-width: 768px) {
+  .block__showcase .grid {
+    grid-template-columns: 50% 50%;
+  }
+  .block_showcase_image {
+    justify-self: end;
+  }
+  .block_showcase_image > img {
+    width: auto;
+    height: auto;
+    max-width: 700px;
+  }
+}
+.block__showcase .icon-container {
+  box-shadow: 1px -1px 5px 9px #d1c0a8;
+  -webkit-box-shadow: 1px -1px 5px 9px #d1c0a8;
+  -moz-box-shadow: 1px -1px 5px 9px #d1c0a8;
 }
