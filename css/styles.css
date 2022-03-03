@@ -641,13 +641,13 @@ a {
   display: flex;
   justify-content: space-between;
 }
-.collapsible .icon-container {
-  width: 30px;
-  height: 30px;
-}
 .collapsible_heading {
   margin-top: 0;
   font-size: 3rem;
+}
+.collapsible .icon-container {
+  width: 30px;
+  height: 30px;
 }
 .collapsible_chevron {
   transition: transform 0.5s;
@@ -897,4 +897,103 @@ nav.collapsible--expanded .icon-container .icon.bg-menu {
   box-shadow: 1px -1px 5px 9px #d1c0a8;
   -webkit-box-shadow: 1px -1px 5px 9px #d1c0a8;
   -moz-box-shadow: 1px -1px 5px 9px #d1c0a8;
+}
+/*FOOTER*/
+.block__footer {
+  padding: var(--padding-vertical) 6rem;
+}
+.footer .grid {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  justify-content: center;
+}
+.footer__section {
+  padding: 2rem;
+  border-bottom: 1px solid #c9b1a8;
+}
+.footer_heading {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+.footer--list_item {
+  font-size: 1.4rem;
+}
+.footer_brand {
+  margin: auto;
+  margin-top: 4rem;
+}
+.footer__brand .icon-container {
+  width: 10rem;
+  height: 10rem;
+}
+.footer_brand .icon {
+  zoom: 0.18;
+}
+.footer--list_item > a {
+  color: var(--color-secondary);
+}
+.footer--list_item > a:hover {
+  color: var(--color-primary);
+}
+.footer__logo {
+  justify-self: center;
+  padding-top: 1rem;
+}
+.footer__logo .icon-container {
+  width: 110px;
+  height: 110px;
+}
+.icon--footer.icon {
+  zoom: 0.2;
+  align-self: center;
+}
+.collapsible_chevron--footer {
+  opacity: 0;
+  transition: all 0.8s;
+}
+.footer__content--colapsible {
+  opacity: 1;
+  max-height: none;
+}
+.footer .grid .content__collapsible > ul {
+  margin-top: 0;
+}
+@media only screen and (min-width: 769px) and (max-width: 1046px) {
+  .footer .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer_heading {
+    font-size: 1.6rem;
+  }
+  .collapsible_chevron--footer {
+    opacity: 1;
+  }
+  .footer__content--colapsible {
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.8s;
+  }
+  .footer--list_item {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .footer .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .footer_heading {
+    font-size: 2rem;
+  }
+  .collapsible_chevron--footer {
+    opacity: 1;
+  }
+  .footer__content--colapsible {
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.8s;
+  }
+  .footer--list_item {
+    font-size: 1.8rem;
+  }
 }
