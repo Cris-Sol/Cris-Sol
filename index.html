@@ -4,17 +4,446 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Unicorn Strategy - Infrastructure and Analytics for your company</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;1,600;1,100;1,700&display=swap" rel="stylesheet">
     <link rel="'stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
 </head>
 <body>
-<!-- so i dont ruin something-->
+<!-- nav bar or navigation_bar.html -->
+<header>
+    <nav class="nav collapsible">
+        <a href="/"><span class="icon-container"><span class="icon bg-unicorn"></span></span></a>
+        <span class="icon-container"><span class="icon bg-menu"></span></span>
+        <ul class=" lists nav_list content__collapsible">
+            <li class="nav__item"><a href="/">About US</a></li>
+            <li class="nav__item"><a href="/">Trainings</a></li>
+            <li class="nav__item"><a href="/">Domains</a></li>
+            <li class="nav__item"><a href="/">Pricing</a></li>
+        </ul> 
+    </nav>
+</header>
+<!--top banner or hero component; top_banner.html -->
+<section class="block block--dark block_clipped_right hero">
+    <div class="container grid grid--col2">
+        <header class="hero__content">
+            <h1 class="hero__header">Expert consulting for your firm</h1>
+            <p class="hero__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore corrupti eum maxime soluta dicta.</p>
+            <a href="#" class="btn button--primary btn--stretch ">Get Started</a>
+        </header>
+        <div class="hero__content"><div class="contain_heroimage"><img src="images/data-center.png" alt="Machines accessing server"></div></div>
+    </div>    
+</section>
+
+
+<!--Domain prices or search_prices.html-->
+<section class="block container block-domain">
+    <header class="block__header">
+        <h2>Starting at 1$ per month</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, odit nobis! </p>
+    </header>
+    <div class="container input-group">
+         <input type="text" class="textinput" placeholder="Search for..."/>
+         <button class="btn button--accent">
+             <span class="icon-container">
+             <span class="icon bg-search">
+             </span></span>
+             <span class="search_button--text">Search</span></button>
+    </div>
+        
+    <div class="block_domain__prices">
+        <ul class="lists block-domain__price">
+            <li><span class="badge badge--secondary">Item 70$</span></li>
+            <li><span class="badge badge--secondary">Item 65$</span></li>
+            <li><span class="badge badge--secondary">Item 7$</span></li>
+            <li><span class="badge badge--secondary">Item 9$</span></li>
+            <li><span class="badge badge--secondary">Item 7$</span></li>
+            <li><span class="badge badge--secondary">Item 40$</span></li>
+        </ul>
+    </div> 
+</section>
+
+<!--block_Plan-->
+<section class="block__viewport_plan block__plan grid grid--col3">
+    <div>
+        <div class="plan  ">
+            <div class="card card--secondary">
+                <header class="card__header">
+                    <h3 class="plan__name">Professional</h3>
+                    <span class="plan__price">20$</span>
+                    <span class="plan__billing">/month</span>
+                    <span class="badge badge--secondary badge--small">30% Off</span>
+                    <span class="plan__description">Choose up to 20 services for your business. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, hic eius aperiam earum ratione praesentium itaque, reprehenderit rem deleniti repellat facere. Ab iusto minima a fugit. Reiciendis error consequatur quo.</span>
+                </header>
+                <div class="card__body"><ul class=" lists ">
+                    <li class="list--tick lists__item">Item 1</li>
+                    <li class="list--tick lists__item">Item 2</li>
+                    <li class="list--tick lists__item">Item 3</li>
+                </ul> 
+                <button class="btn btn-block  outline-buttons">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="plan plan--popular">
+            <div class="card card--primary">
+                <header class="card__header">
+                    <h3 class="plan__name">Basic</h3>
+                    <span class="plan__price">1$</span>
+                    <span class="plan__billing">/month</span>
+                    <span class="badge badge--primary">10% Off</span>
+                    <span class="plan__description"> Cheap and safe, for personal use only Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem facilis ipsum sapiente cum, reiciendis cumque explicabo tempore accusantium iste, rem ut, aperiam error. Officiis eius quas iste. Reiciendis, repellat nesciunt.</span>
+                </header>
+                <div class="card__body"><ul class=" lists ">
+                    <li class="list--tick lists__item">Item 1</li>
+                    <li class="list--tick lists__item">Item 2</li>
+                    <li class="list--tick lists__item">Item 3</li>
+                </ul> 
+                <button class="btn btn-block  outline-buttons">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="plan  ">
+            <div class="card card--secondary">
+                <header class="card__header">
+                    <h3 class="plan__name">Professional</h3>
+                    <span class="plan__price">20$</span>
+                    <span class="plan__billing">/month</span>
+                    <span class="badge badge--secondary badge--small">30% Off</span>
+                    <span class="plan__description">Choose up to 20 services for your business. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, hic eius aperiam earum ratione praesentium itaque, reprehenderit rem deleniti repellat facere. Ab iusto minima a fugit. Reiciendis error consequatur quo.</span>
+                </header>
+                <div class="card__body"><ul class=" lists ">
+                    <li class="list--tick lists__item">Item 1</li>
+                    <li class="list--tick lists__item">Item 2</li>
+                    <li class="list--tick lists__item">Item 3</li>
+                </ul> 
+                <button class="btn btn-block  outline-buttons">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--block_showcase-->
+<section class="block block--dark block_clipped_left block__showcase">
+    <header class="block__header">
+        <h2 class="block__heading">Dedicated data engineers and scientists</h2>
+    </header>
+    <div class="grid grid--col2 block__feature block__showcase">
+        
+         
+        <picture class="block_showcase_image" >
+            <source 
+            type="image/webp"
+            srcset="images/ipad.webp 1x, images/ipad@2x.webp 2x"
+            />
+            <source type="image/png"
+            
+            srcset="images/ipad.png 1x, images/ipad@2x.png 2x"
+            />
+            
+            <img src="images/ipad.webp" alt="iPad">
+        </picture>
+
+
+        <div>
+            <ul class="lists">
+                <il>
+                    <footer>
+                        <div class="media">
+                            <div class="meadia__image">
+                                <span class="icon-container icon-container--background"><span class="icon  bg-choose"></span></span>
+                                </div>
+                                <div class="media__body">
+                                    <h3 class="media__title quote__author">Choose the best options for your business</h3>
+                                    <p class="media__company quote_organization">Deconstruct and strip away the hay.</p>
+                                </div>
+                         </div>
+                    </footer>
+                </il>
+                <il>
+                    <footer>
+                        <div class="media">
+                            <div class="meadia__image">
+                                <span class="icon-container icon-container--background"><span class="icon  bg-wordpress"></span></span>
+                                </div>
+                                <div class="media__body">
+                                    <h3 class="media__title quote__author">Full support on your WebPress website </h3>
+                                    <p class="media__company quote_organization">No backend intervention needed, we take care of all the headaches</p>
+                                </div>
+                         </div>
+                    </footer>
+                </il>
+                <il>
+                    <footer>
+                        <div class="media">
+                            <div class="meadia__image">
+                                <span class="icon-container icon-container--background"><span class="icon  bg-monitor"></span></span>
+                                </div>
+                                <div class="media__body">
+                                    <h3 class="media__title quote__author">Fully automated and fully dedicated to your needs </h3>
+                                    <p class="media__company quote_organization">Your want list is our to do list. </p>
+                                </div>
+                         </div>
+                    </footer>
+                </il>
+            </ul>
+        </div>
+
+</section>
+
+
+<!--Block_features-->
+
+<section class="block">
+    <header class="block__header">
+        <h2 class="block__heading">LIMITLESS towards greatness</h2>
+        <p class=>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    </header>
+
+    <div class="block__features grid grid--col2 block__feature" >
+        <div class="feature__content"  >
+            <span class="icon-container icon-container--background">
+                <span class="icon bg-growth">
+                </span></span>
+            <h3 class="block__heading feature--heading">Super easy analysis and analytics</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ratione voluptas, eligendi vel enim quaerat harum commodi quia corrupti tempora explicabo facilis molestiae neque non fugiat totam? Aliquam, blanditiis fugiat!</p>
+            <a href="" class="link-learn" alt="">Learn More</a>
+        </div>
+        <div>
+            <div class="feature_imagealignment" >
+                <img class="contain__featureimage" src="images/computing.png">
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="block__features grid grid--col2 block__feature">
+        <div class="feature__content">
+            <div class="feature_imagealignment">
+                <img class="contain__featureimage" src="images/security_lock.png"></div>
+        </div>
+
+
+
+
+        <DIV class="feature__content">
+            <span class="icon-container icon-container--background">
+                <span class="icon bg-fingerprint">
+                </span></span>
+            <h3 class="block__heading feature--heading">Super easy analysis and analytics</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ratione voluptas, eligendi vel enim quaerat harum commodi quia corrupti tempora explicabo facilis molestiae neque non fugiat totam? Aliquam, blanditiis fugiat!</p>
+            <a href="" class="link-learn" alt="">Learn More</a>
+        </DIV>
+    </div>
+
+</section>
+
+<!--block_testimonials-->
+<section class="block">
+    <div class="block__wiewport_testimonial">
+        <header class="block__header">
+            <h2 class="block__heading">Customer's opinion</h2>
+            <p class=>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </header>
+        <div class="container">
+            <div class="card testimonial ">
+                <div class="grid grid--col2 ">
+                    <div class="testimonial__image">
+                        <img  src="images/happy-girl.jpg" alt="Happy, beautiful customer"/>
+                        <span class="icon-container icon-small"><span class="icon bg-quotes"></span></span>
+                    </div>
+                    <blockquote class="quote">
+                        <p class="quote__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sed perspiciatis excepturi architecto harum, ipsum doloribus in officiis voluptatum mollitia, a quasi velit consequuntur magni? Reprehenderit hic atque recusandae tempora?</p>
+                        <footer>
+                            <div class="media">
+                                <div class="meadia__image">
+                                    <span class="icon-container"><span class="icon quote--line bg-line"></span></span>
+                                    </div>
+                                    <div class="media__body">
+                                        <h3 class="media__title quote__author">Jane Doe</h3>
+                                        <p class="media__company quote_organization">Company Name</p>
+                                    </div>
+                             </div>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+            </div>
+    </div>
+</section>
+
+
+
+<!--Footer-->
+<footer class="block block--dark block__footer footer">
+    <div class="container grid">
+        <section class="collapsible collapsible--expanded footer__section">
+            <header class="collapsible__header">
+                <h2 class="collapsible_heading footer_heading">Legal</h2>
+                <!--Icon-->
+                <span class="icon-container chevron"><img class="collapsible_chevron collapsible_chevron--footer" src="images/down.png" alt="Drop Down"/></span>
+            </header>
+            <div class="content__collapsible">
+                <ul class="lists">
+                    <li class="footer--list_item"><a href="/">Privacy Policy</a></li>
+                    <li class="footer--list_item"><a href="/">Terms and conditions</a></li>
+                    <li class="footer--list_item"><a href="/">Sources</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="collapsible  footer__section ">
+            <header class="collapsible__header">
+                <h2 class="collapsible_heading footer_heading">Server Types</h2>
+                <!--Icon-->
+                <span class="icon-container chevron"><img class="collapsible_chevron collapsible_chevron--footer" src="images/down.png" alt="Drop Down"/></span>
+            </header>
+            <div class="content__collapsible footer__content--colapsible">
+                <ul class="lists">
+                    <li class="footer--list_item"><a href="/">General type Instance</a></li>
+                    <li class="footer--list_item"><a href="/">Compute Optimized</a></li>
+                    <li class="footer--list_item"><a href="/">Memmory Optimized</a></li>
+                    <li class="footer--list_item"><a href="/">Storage Optimized</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="collapsible  footer__section">
+            <header class="collapsible__header">
+                <h2 class="collapsible_heading footer_heading">Purchace Plans</h2>
+                <!--Icon-->
+                <span class="icon-container chevron"><img class="collapsible_chevron collapsible_chevron--footer" src="images/down.png" alt="Drop Down"/></span>
+            </header>
+            <div class="content__collapsible footer__content--colapsible">
+                <ul class="lists">
+                    <li class="footer--list_item"><a href="/">On demand</a></li>
+                    <li class="footer--list_item"><a href="/">Reserved Instances</a></li>
+                    <li class="footer--list_item"><a href="/">Spot Instances</a></li>
+                    <li class="footer--list_item"><a href="/">Dedicated Host</a></li>
+                    <li class="footer--list_item"><a href="/">Dedicated Instance</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="collapsible  footer__section">
+            <header class="collapsible__header">
+                <h2 class="collapsible_heading footer_heading">Storage Types</h2>
+                <!--Icon-->
+                <span class="icon-container chevron"><img class="collapsible_chevron collapsible_chevron--footer" src="images/down.png" alt="Drop Down"/></span>
+            </header>            
+            <div class="content__collapsible footer__content--colapsible">
+                <ul class="lists">
+                    <li class="footer--list_item"><a href="/">EBS Volumes</a></li> <!--I could make them expandable-->
+                    <li class="footer--list_item"><a href="/">EFS Volumes</a></li>
+                    <li class="footer--list_item"><a href="/">EBS vs EFS</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="collapsible  footer__section">
+            <header class="collapsible__header">
+                <h2 class="collapsible_heading footer_heading">Load Balancers</h2>
+                <!--Icon-->
+                <span class="icon-container chevron"><img class="collapsible_chevron collapsible_chevron--footer" src="images/down.png" alt="Drop Down"/></span>
+            </header>
+            <div class="content__collapsible footer__content--colapsible">
+                <ul class="lists">
+                    <li class="footer--list_item"><a href="/">Classic Load Balancer</a></li> <!--I could make them expandable-->
+                    <li class="footer--list_item"><a href="/">Application Load Balancer</a></li>
+                    <li class="footer--list_item"><a href="/">Network Load Balancer</a></li>
+                    <li class="footer--list_item"><a href="/">Gateway Load Balancer</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="collapsible  footer__section">
+            <header class="collapsible__header">
+                <h2 class="collapsible_heading footer_heading">Relational Databadse Services</h2>
+                <!--Icon-->
+                <span class="icon-container chevron"><img class="collapsible_chevron collapsible_chevron--footer" src="images/down.png" alt="Drop Down"/></span>
+            </header>
+            <div class="content__collapsible footer__content--colapsible">
+                <ul class="lists">
+                    <li class="footer--list_item"><a href="/">Aurora</a></li> <!--I could make them expandable-->
+                    <li class="footer--list_item"><a href="/">Maria</a></li>
+                    <li class="footer--list_item"><a href="/">Oracle</a></li>
+                    <li class="footer--list_item"><a href="/">MS SQL</a></li>
+                    <li class="footer--list_item"><a href="/">MySQL</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="collapsible  footer__section">
+            <header class="collapsible__header">
+                <h2 class="collapsible_heading footer_heading">DNS Services</h2>
+                <!--Icon-->
+                <span class="icon-container chevron"><img class="collapsible_chevron collapsible_chevron--footer" src="images/down.png" alt="Drop Down"/></span>
+            </header>
+            <div class="content__collapsible footer__content--colapsible">
+                <ul class="lists">
+                    <li class="footer--list_item"><a href="/">Route 53</a></li> <!--I could make them expandable-->
+                    <li class="footer--list_item"><a href="/">Cloudflare DNS</a></li>
+                    <li class="footer--list_item"><a href="/">GoDaddy Premium</a></li>
+                    <li class="footer--list_item"><a href="/">Google Cloud</a></li>
+                    <li class="footer--list_item"><a href="/">Blox One</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="collapsible  footer__section">
+            <header class="collapsible__header">
+                <h2 class="collapsible_heading footer_heading">Content Delivery</h2>
+                <!--Icon-->
+                <span class="icon-container chevron"><img class="collapsible_chevron collapsible_chevron--footer" src="images/down.png" alt="Drop Down"/></span>
+            </header>
+            <div class="content__collapsible footer__content--colapsible">
+                <ul class="lists">
+                    <li class="footer--list_item"><a href="/">RackSpace</a></li> <!--I could make them expandable-->
+                    <li class="footer--list_item"><a href="/">CloudFlare</a></li>
+                    <li class="footer--list_item"><a href="/">Akamai</a></li>
+                    <li class="footer--list_item"><a href="/">Microsoft Azure</a></li>
+                    <li class="footer--list_item"><a href="/">Limelight</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="collapsible  footer__section">
+            <header class="collapsible__header">
+                <h2 class="collapsible_heading footer_heading">Applications Firewall</h2>
+                <!--Icon-->
+                <span class="icon-container chevron"><img class="collapsible_chevron collapsible_chevron--footer" src="images/down.png" alt="Drop Down"/></span>
+            </header>
+            <div class="content__collapsible footer__content--colapsible">
+                <ul class="lists">
+                    <li class="footer--list_item"><a href="/">Aurora</a></li> <!--I could make them expandable-->
+                    <li class="footer--list_item"><a href="/">Maria</a></li>
+                    <li class="footer--list_item"><a href="/">Oracle</a></li>
+                    <li class="footer--list_item"><a href="/">MS SQL</a></li>
+                    <li class="footer--list_item"><a href="/">MySQL</a></li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+    <section class="footer__logo">
+        <span class="icon-container">
+            <span class="icon icon--footer bg-unicorn">
+            </span></span>
+            <p class="footer_copyright">Copyright 2020 Cristina Soltoianu</p>
+    </section>
+</footer>
 
 <script src="js/main.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    $(function() {
+         AOS.init();
+    });
+</script>
 </body>
 </html>
