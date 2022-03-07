@@ -1,7 +1,16 @@
 <div class="card testimonial ">
     <div class="grid grid--col2 ">
         <div class="testimonial__image">
-            <img  src="images/happy-girl.jpg" alt="Happy, beautiful customer"/>
+            <picture>
+                <source type="image/webp"
+                srcset="images/happy-girl1x.webp 1x, images/happy-girl2x.webp 2x"
+                />
+                <source type="image/png"
+                srcset="images/happy-girl1x.png 1x, images/happy-girl2x.png 2x"
+                />
+                
+                <img  src="images/happy-girl1x.png" alt="">
+            </picture>
             <span class="icon-container icon-small"><span class="icon bg-quotes"></span></span>
         </div>
         <blockquote class="quote">
