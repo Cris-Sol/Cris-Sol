@@ -506,6 +506,10 @@ a {
 }
 
 /*QUOTES*/
+.block__wiewport_testimonial {
+  margin: 0 auto;
+  max-width: 70vw;
+}
 .quote {
   color: var(--color-darker);
   font-size: 2rem;
@@ -552,7 +556,7 @@ a {
     vertical-align: center;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .quote__author {
     font-size: 2.2rem;
   }
@@ -606,6 +610,15 @@ a {
 }
 .testimonial > .quote__text {
   padding-top: 3rem;
+}
+@media only screen and (max-width: 1000px) {
+  .testimonial .grid--col2 {
+    grid-template-columns: 1fr;
+  }
+  .block__wiewport_testimonial {
+    margin: 0 auto;
+    max-width: 84vw;
+  }
 }
 @media only screen and (max-width: 768px) {
   .grid > .testimonial__image > .icon-container {
@@ -841,7 +854,6 @@ nav.collapsible--expanded .icon-container .icon.bg-menu {
   justify-items: center;
   align-items: center;
   max-width: 70rem;
-  margin: 0 minmax(2rem 100rem);
 }
 @media only screen and (min-width: 768px) {
   .block-domain__price {
@@ -1042,9 +1054,4 @@ nav.collapsible--expanded .icon-container .icon.bg-menu {
 .block__viewport_plan {
   margin: 0 auto;
   max-width: 80vw;
-}
-
-.block__wiewport_testimonial {
-  margin: 0 auto;
-  max-width: 50vw;
 }
