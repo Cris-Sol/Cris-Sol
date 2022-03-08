@@ -1,1 +1,4 @@
 sandbox.html
+node_modules/
+.cache
+dist
