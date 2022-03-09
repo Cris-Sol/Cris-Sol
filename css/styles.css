@@ -753,7 +753,7 @@ a {
   transition: color 0.4s;
 }
 .nav__item > a:hover {
-  color: var(--color-primary);
+  color: var(--color-headings);
 }
 .collapsible .icon.bg-unicorn:hover,
 .collapsible .icon.bg-menu:hover {
